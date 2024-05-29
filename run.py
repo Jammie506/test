@@ -81,45 +81,45 @@ def user_input(place_ship):
     if place_ship == True:
         while True:
             try: 
-                orientation = input("Enter orientation (H or V): ").upper()
+                orientation = input("Enter orientation (H or V): \n").upper()
                 if orientation == "H" or orientation == "V":
                     break
             except TypeError:
-                print('Enter a valid orientation H or V')
+                print('Enter a valid orientation H or V \n')
         while True:
             try: 
-                row = input("Enter the row 1-8 of the ship: ")
+                row = input("Enter the row 1-8 of the ship: \n")
                 if row in '12345678':
                     row = int(row) - 1
                     break
             except ValueError:
-                print('Enter a valid letter between 1-8')
+                print('Enter a valid letter between 1-8 \n')
         while True:
             try: 
-                column = input("Enter the column of the ship: ").upper()
+                column = input("Enter the column of the ship: \n").upper()
                 if column in 'ABCDEFGH':
                     column = LETTERS_TO_NUMBERS[column]
                     break
             except KeyError:
-                print('Enter a valid letter between A-H')
+                print('Enter a valid letter between A-H \n')
         return row, column, orientation 
     else:
         while True:
             try: 
-                row = input("Enter the row 1-8 of the ship: ")
+                row = input("Enter the row 1-8 of the ship: \n")
                 if row in '12345678':
                     row = int(row) - 1
                     break
             except ValueError:
-                print('Enter a valid letter between 1-8')
+                print('Enter a valid letter between 1-8 \n')
         while True:
             try: 
-                column = input("Enter the column of the ship: ").upper()
+                column = input("Enter the column of the ship: /n").upper()
                 if column in 'ABCDEFGH':
                     column = LETTERS_TO_NUMBERS[column]
                     break
             except KeyError:
-                print('Enter a valid letter between A-H')
+                print('Enter a valid letter between A-H /n')
         return row, column        
 
 #check if all ships are hit
@@ -162,7 +162,7 @@ place_ships(PLAYER_BOARD)
 while True:
     #player turn
     while True:
-        print('Guess a battleship location')
+        print('Guess a battleship location /n')
         print_board(PLAYER_GUESS_BOARD)
         turn(PLAYER_GUESS_BOARD)
         break
